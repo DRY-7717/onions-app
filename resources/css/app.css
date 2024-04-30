@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.data-customer table tbody tr {
+    @apply bg-[#e7f1fb] even:bg-[#d9e9f9] text-center;
+}
+.data-customer table thead tr {
+    @apply bg-[#8ebfff] text-center;
+}
