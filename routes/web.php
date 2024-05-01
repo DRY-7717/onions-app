@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BawangController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\UserController;
+use App\Models\Customer;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,26 +20,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+Route::get('/', [AdminController::class, 'index'])->middleware('auth');
 
-Route::get('/', [AdminController::class, 'index']);
 Route::get('/login', [AuthController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/login', [AuthController::class, 'authenticate'])->middleware('guest');
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
 
 
-Route::get('/menuadmin', [AdminController::class, 'menuAdmin'])->middleware('auth');
+Route::get('/menuadmin', [AdminController::class, 'menuAdmin'])->middleware('admin');
 
-Route::get('/tambahuser', [UserController::class, 'index'])->middleware('auth');
-Route::post('/tambahuser', [UserController::class, 'crud'])->middleware('auth');
-Route::get('/detailuser', [UserController::class, 'show'])->middleware('auth');
+Route::get('/tambahuser', [UserController::class, 'index'])->middleware('admin');
+Route::post('/tambahuser', [UserController::class, 'crud'])->middleware('admin');
+Route::get('/detailuser', [UserController::class, 'show'])->middleware('admin');
 
-Route::get('/registercustomer', [CustomerController::class, 'index']);
+Route::get('/registercustomer', [CustomerController::class, 'index'])->middleware('auth');
 Route::post('/registercustomer', [CustomerController::class, 'crud']);
+Route::get('/printlaporan', [CustomerController::class, 'print'])->middleware('admin');
 
-Route::get('/datacustomer', [CustomerController::class, 'listData'])->middleware('auth');
+Route::get('/datacustomer', [CustomerController::class, 'listData'])->middleware('admin');
+Route::get('/datapesanan', [CustomerController::class, 'listPesanan'])->middleware('auth');
 
-Route::get('/tambahbawang', [BawangController::class, 'index']);
-Route::post('/tambahbawang', [BawangController::class, 'crud']);
+Route::get('/tambahbawang', [BawangController::class, 'index'])->middleware('admin');
+Route::post('/tambahbawang', [BawangController::class, 'crud'])->middleware('admin');
 
 Route::get('/databawang', [BawangController::class, 'listData'])->middleware('auth');
+

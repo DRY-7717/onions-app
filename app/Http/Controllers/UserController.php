@@ -14,7 +14,8 @@ class UserController extends Controller
         return view('tambah-user');
     }
 
-    public function show() {
+    public function show()
+    {
 
         return view('detail-data-admin');
     }
@@ -32,6 +33,7 @@ class UserController extends Controller
         ]);
 
         $data['password'] = Hash::make($data['password']);
+        $data['role'] = 2;
 
         if ($action === 'tambah') {
             User::create($data);
