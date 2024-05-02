@@ -48,7 +48,7 @@
 
 
 
-                    <a href="/"
+                    <a href="/menuutama"
                         class="relative mx-auto font-bold bg-[#4ac7c6]  px-8 py-1  rounded-full text-sm">Keluar
                         <div class="kotak w-5 h-5 rounded-full bg-white font-normal absolute top-1 right-1">&#8658;</div>
                     </a>

@@ -62,7 +62,7 @@
                         class="mx-auto font-bold bg-[#6693ee] text-white px-7 py-1 border-[3px] border-[#456ab7] rounded-full text-sm">Ubah</button>
                     <button type="submit" name="action" value="hapus"
                         class="mx-auto font-bold bg-[#6693ee] text-white px-7 py-1 border-[3px] border-[#456ab7] rounded-full text-sm">Hapus</button>
-                    <a href="/"
+                    <a href="/menuutama"
                         class="relative mx-auto font-bold bg-[#4ac7c6]  px-8 py-1  rounded-full text-sm">Keluar
                         <div class="kotak w-5 h-5 rounded-full bg-white font-normal absolute top-1 right-1">&#8658;</div>
                     </a>

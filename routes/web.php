@@ -20,12 +20,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [AdminController::class, 'index'])->middleware('auth');
 
-Route::get('/login', [AuthController::class, 'index'])->middleware('guest')->name('login');
-Route::post('/login', [AuthController::class, 'authenticate'])->middleware('guest');
+Route::get('/', [AuthController::class, 'index'])->middleware('guest')->name('login');
+Route::post('/', [AuthController::class, 'authenticate'])->middleware('guest');
+
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
+Route::get('/menuutama', [AdminController::class, 'index'])->middleware('auth');
 
 
 Route::get('/menuadmin', [AdminController::class, 'menuAdmin'])->middleware('admin');

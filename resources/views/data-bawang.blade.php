@@ -11,7 +11,7 @@
 
             <div class="w-full flex justify-between items-center mb-20">
                 <a href="" class="px-6 py-2 rounded-full font-bold bg-[#fdad54]">Simpan</a>
-                <a href="/" class="px-6 py-2 rounded-full font-bold bg-[#fdad54]">Keluar</a>
+                <a href="/menuutama" class="px-6 py-2 rounded-full font-bold bg-[#fdad54]">Keluar</a>
             </div>
 
         </div>

@@ -5,7 +5,7 @@
 @section('section')
     <section class="w-full">
         <div class="box-login w-[500px] mx-auto bg-[#d6d9e0] mt-36 py-6 px-4">
-            <form action="/login" method="POST">
+            <form action="/" method="POST">
                 @csrf
                 <table class="table-auto mx-auto mb-12">
                     <tbody>

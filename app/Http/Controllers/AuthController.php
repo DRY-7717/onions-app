@@ -28,11 +28,11 @@ class AuthController extends Controller
                 # code...
                 return redirect()->intended('/menuadmin');
             } else {
-                return redirect()->intended('/');
+                return redirect()->intended('/menuutama');
             }
         }
 
-        return redirect('/login');
+        return redirect('/');
     }
 
     public function logout(Request $request)
@@ -43,6 +43,6 @@ class AuthController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/login');
+        return redirect('/');
     }
 }
