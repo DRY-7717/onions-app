@@ -30,6 +30,7 @@
                 <th>Nama</th>
                 <th>Jumlah Bawang</th>
                 <th>Harga Bawang</th>
+                <th>Tanggal Pembelian</th>
             </tr>
         </thead>
         <tbody>
@@ -45,6 +46,7 @@
                         <td style="text-align: center;">{{ $customer->nama }}</td>
                         <td style="text-align: center;">{{ $customer->jml_bawang }}</td>
                         <td style="text-align: center;">{{ $customer->hrg_bawang }}</td>
+                        <td style="text-align: center;">{{ $customer->created_at->format('d-m-Y') }}</td>
                     </tr>
                 @endforeach
             @else

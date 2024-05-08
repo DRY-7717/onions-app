@@ -4,13 +4,13 @@
 
 @section('section')
     <section
-        class="w-[868px] h-dvh  bg-[url(../../public/img/bawang-merah.jpg)] bg-contain bg-center bg-no-repeat pt-11 mx-auto px-11 ">
+        class="w-[900px] h-dvh  bg-[url(../../public/img/bawang-merah.jpg)] bg-contain bg-center bg-no-repeat pt-11 mx-auto px-11 ">
         <div
             class="box-main-menu mx-auto bg-[#fdad54] mb-24 border-white border-2 w-52  py-2 px-4 font-bold text-2xl text-center rounded-tl-lg rounded-bl-lg rounded-tr-[50px] rounded-br-[50px]">
             Menu Utama
         </div>
 
-        <div class="w-full grid grid-cols-2 mb-20">
+        <div class="w-full grid grid-cols-2 mb-14">
             <div class="box-btn-data">
                 <a href="/registercustomer">
                     <div
