@@ -22,6 +22,8 @@
     @yield('section')
 
     @livewireScripts
+
+    @stack('script')
 </body>
 
 </html>

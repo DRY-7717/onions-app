@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BawangController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\PredikController;
 use App\Http\Controllers\UserController;
 use App\Models\Customer;
 use Illuminate\Support\Facades\Route;
@@ -46,4 +47,6 @@ Route::get('/tambahbawang', [BawangController::class, 'index'])->middleware('adm
 Route::post('/tambahbawang', [BawangController::class, 'crud'])->middleware('admin');
 
 Route::get('/databawang', [BawangController::class, 'listData'])->middleware('auth');
+
+Route::get('/prediksi', [PredikController::class, 'index'])->middleware('auth');
 
